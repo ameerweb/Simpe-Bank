@@ -3,6 +3,7 @@
 
 from datetime import datetime
 
+
 class Customer:
     balance = 0
     dateTime = datetime.now()
@@ -13,7 +14,7 @@ class Customer:
         print(f'Deposit {amount}YR to your bank balance on {self.dateFormat}')
         return self.balance
 
-    def withdrowal(self, amount):
+    def withdrawal(self, amount):
         self.balance = self.balance - amount
         print(f'{amount} were deducted from your bank balance on {self.dateFormat}')
         return self.balance
@@ -25,5 +26,5 @@ class Customer:
 ameer = Customer()
 ameer.deposit(500)
 ameer.balance_query()
-ameer.withdrowal(150)
+ameer.withdrawal(150)
 ameer.balance_query()
